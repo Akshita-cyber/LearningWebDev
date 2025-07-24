@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <img id ="owl" width="200px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Bubo_bubo_sibiricus_-_01.JPG/500px-Bubo_bubo_sibiricus_-_01.JPG" alt="owl">
+</body>
+<script>
+    // document.getElementById('owl').onclick=function(){
+    //     alert('owl clicked');
+    // }
+
+    //add event listener
+    document.getElementById('owl').addEventListener('click',function(){
+        alert('owl clicked again');
+    })
+
+    document.getElementById('owl').addEventListener('click',function(e){
+        console.log(e);
+        
+    })
+    // attachEvent()
+    // jQuery - on
+
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+</script>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>DOM learning</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div >
+        <h1  id="title" class="heading">DOM learning on Chai aur code <span style="display: none;">test text</span></h1>
+        <h2>Lorem ipsum dolor sit.</h2>
+    </div>
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(langName){
+        const li= document.createElement('li')
+        li.innerHTML= `${langName}`
+        document.querySelector(".language").appendChild(li)
+    }
+    addLanguage('python')
+    addLanguage('typescript')
+    function addOptiLanguage(langName){
+        const li=document.createElement('li');
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptiLanguage('golang')
+
+
+    //edit
+    const secLang=document.querySelector('li:nth-child(2)')
+    // secLang.innerHTML="Mojo"
+    const newli=document.createElement('li')
+    newli.textContent="Mojo"
+    secLang.replaceWith(newli)
+
+    //remove
+    const lastLang= document.querySelector('li:last-child')
+    lastLang.remove()
+
+</script>
+</html>

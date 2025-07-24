@@ -149,3 +149,11 @@ const newNums=myNumers
 
 console.log(newNums);
 
+//reduce
+
+const numbers = [1, 2, 3, 4, 5];
+
+// Calculate the sum of all numbers using reduce()
+const sum = numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+
+console.log(sum); // Output: 15
